@@ -1,0 +1,30 @@
+<% include partials/header %>
+    <h1>Posts</h1>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">Add Post</button>
+    <hr>
+    <table class="table table-hover table-striped">
+        <tr>
+            <th>Title</th>
+            <th colspan='3'>Actions</th>
+        </tr>
+    <tbody id="posts">
+    <% for (post of posts) { %>
+        <tr id="<%= post._id %>">
+            <td><%= post.title%></td>
+            <td>
+                <button type="button" class="btn btn-secondary viewPost" data-toggle="modal" data-target="#readModal" data-id="<%= post._id%>">View</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-info editPost" data-toggle="modal" data-target="#editModal" data-id="<%= post._id%>">Edit</button>
+            </td>
+            <td>
+                <a class="btn btn-danger removePost" href="#" data-id="<%= post._id %>">Delete</a>
+            </td>
+        </tr>
+    <% } %>
+    </tbody>
+    </table>
+    <% include partials/create %>
+    <% include partials/edit %>
+    <% include partials/read %>
+<% include partials/footer %>
