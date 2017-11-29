@@ -33,6 +33,11 @@ app.use(bodyParser.urlencoded({extended:false}));
             });
         });
     });
+    app.get('/api/posts',(req,res)=>{
+        db.posts.find((err,docs)=>{
+            res.json(docs);
+        });
+    });
     app.post('/posts',(req,res)=>{
         let newPost = {
             title: req.body.title,
