@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const mongojs = require('mongojs');
-const db = mongojs('mongodb://admin:admin@ds245337.mlab.com:45337/async_blog',['posts']);
+const db = mongojs(process.env.MONGO_URI,['posts']);
 const ObjectId = mongojs.ObjectId;
 const app = express();
 
