@@ -4,7 +4,7 @@
   "description": "Non reloading blog",
   "main": "app.js",
   "scripts": {
-    "start": "npm install && node app.js"
+    "start": "node app.js"
   },
   "author": "Francis Avancena",
   "license": "ISC",
