@@ -4,9 +4,9 @@
   "description": "Non reloading blog",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "npm install && node app.js"
   },
-  "author": "",
+  "author": "Francis Avancena",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
