@@ -76,7 +76,9 @@ app.use(bodyParser.urlencoded({extended:false}));
     });
 // ****************************************** //
 
+const port = process.env.PORT || 8000;
+
 // * Port
-app.listen(8000,()=>{
+app.listen(port,()=>{
     console.log('Application is running on http://127.0.0.1:8000 . . .');
 });
